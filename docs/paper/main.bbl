@@ -1,0 +1,108 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahmad and Wilmott(2005)]{ahmad2005free}
+Riaz Ahmad and Paul Wilmott.
+\newblock Which free lunch would you like today, sir?: Delta hedging,
+  volatility arbitrage and optimal portfolios.
+\newblock \emph{Wilmott}, pages 64--79, 2005.
+
+\bibitem[Bhat(2021)]{BhatRupeeDollar}
+Aparna Bhat.
+\newblock {The Profitability of Volatility Trading on Exchange-traded
+  Dollar-rupee Options: Evidence of a Volatility Risk Premium?}
+\newblock \emph{Global Business Review}, page 09721509211046169, October 2021.
+\newblock ISSN 0972-1509.
+\newblock \doi{10.1177/09721509211046169}.
+
+\bibitem[Black and Scholes(1973)]{Black1973May}
+Fischer Black and Myron Scholes.
+\newblock {The Pricing of Options and Corporate Liabilities}.
+\newblock \emph{Journal of Political Economy}, May 1973.
+\newblock \doi{10.1086/260062}.
+
+\bibitem[Bondarenko(2016)]{bondarenko2016analysis}
+Oleg Bondarenko.
+\newblock An analysis of index option writing with monthly and weekly rollover.
+\newblock \emph{Available at SSRN 2750188}, 2016.
+
+\bibitem[Bouchouev and Johnson(2022)]{BouchouevOil}
+Ilia Bouchouev and Brett Johnson.
+\newblock {The volatility risk premium in the oil market}.
+\newblock \emph{Quantitative Finance}, 22\penalty0 (8):\penalty0 1561--1578,
+  August 2022.
+\newblock ISSN 1469-7688.
+\newblock \doi{10.1080/14697688.2022.2066322}.
+
+\bibitem[Breiman(2001)]{RFBreiman}
+Leo Breiman.
+\newblock {Random Forests}.
+\newblock \emph{Machine Learning}, 45\penalty0 (1):\penalty0 5--32, October
+  2001.
+\newblock ISSN 1573-0565.
+\newblock \doi{10.1023/A:1010933404324}.
+
+\bibitem[Breiman et~al.(1984)Breiman, Friedman, Olshen, and
+  Stone]{breiman1984classification}
+Leo Breiman, JH~Friedman, RA~Olshen, and CJ~Stone.
+\newblock Classification and regression trees. wadsworth \& brooks.
+\newblock \emph{Cole Statistics/Probability Series}, 1984.
+
+\bibitem[Daily(2018)]{daily_options_2018}
+Investor's~Business Daily.
+\newblock Options {Trading} {Strategies}: {How} {Put} {Options} {Can} {Be}
+  {Used} {As} {Insurance}, August 2018.
+\newblock URL
+  \url{https://www.investors.com/research/options/options-trading-put-option-caterpillar-stock/}.
+
+\bibitem[Dapena and Siri(2015)]{dapena2015index}
+Jos{\'e}~P Dapena and Juli{\'a}n~Ricardo Siri.
+\newblock Index options realized returns distributions from passive investment
+  strategies.
+\newblock \emph{Serie Documentos de Trabajo}, \penalty0 (580), 2015.
+
+\bibitem[Dierckx et~al.(2022)Dierckx, Davis, and
+  Schoutens]{dierckx_trading_2022}
+Thomas Dierckx, Jesse Davis, and Wim Schoutens.
+\newblock Trading the {FX} volatility risk premium with machine learning and
+  alternative data.
+\newblock \emph{The Journal of Finance and Data Science}, 8:\penalty0 162--179,
+  2022.
+\newblock ISSN 2405-9188.
+\newblock \doi{https://doi.org/10.1016/j.jfds.2022.07.001}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S2405918822000083}.
+
+\bibitem[Jiang and Tian(2007)]{jiang2007extracting}
+George~J Jiang and Yisong~S Tian.
+\newblock Extracting model-free volatility from option prices: An examination
+  of the vix index.
+\newblock \emph{The Journal of Derivatives}, 14\penalty0 (3):\penalty0 35--60,
+  2007.
+
+\bibitem[Lockwood et~al.(2022)Lockwood, Lockwood, Miao, Ramchander, and
+  Yang]{lockwood2022information}
+Jimmy Lockwood, Larry Lockwood, Hong Miao, Sanjay Ramchander, and Dongxiao
+  Yang.
+\newblock The information content of etf options.
+\newblock \emph{Global Finance Journal}, 53:\penalty0 100725, 2022.
+
+\bibitem[Schulte and Stamos(2015)]{schulte2015performance}
+Dominik Schulte and Michael~Z Stamos.
+\newblock The performance of equity index option strategy returns during the
+  financial crisis.
+\newblock \emph{Available at SSRN 2669999}, 2015.
+
+\bibitem[Zhang and Xiang(2008)]{IVSmirk}
+Jin~E. Zhang and Yi~Xiang.
+\newblock {The implied volatility smirk}.
+\newblock \emph{Quantitative Finance}, 8\penalty0 (3):\penalty0 263--284, April
+  2008.
+\newblock ISSN 1469-7688.
+\newblock \doi{10.1080/14697680601173444}.
+
+\end{thebibliography}

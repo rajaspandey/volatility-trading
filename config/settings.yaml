@@ -1,0 +1,27 @@
+# Global backtest settings
+data:
+  start_date: "2020-01-01"       # fetch from here for ML warm-up
+  backtest_start: "2022-01-01"   # strategy results reported from here
+  end_date: null                  # null = today
+  tickers:
+    underlying: "SPY"
+    index: "^GSPC"
+    vix: "^VIX"
+    vix9d: "^VIX9D"
+    skew: "^SKEW"
+    irx: "^IRX"           # 13-week T-bill
+  fred_series: "TB3MS"    # 3-month T-bill rate
+  cache_dir: "data/raw"
+  processed_dir: "data/processed"
+
+portfolio:
+  initial_capital: 1_000_000     # $1M
+  contract_unit: 100             # shares per options contract
+
+risk:
+  stop_loss_pct: 0.02            # 2% of portfolio equity
+  delta_exit_threshold: 0.75     # |δΔ| > κ triggers liquidation
+
+backtest:
+  rf_rate_source: "fred"         # "fred" | "irx"
+  trading_days_per_year: 252

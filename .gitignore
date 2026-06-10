@@ -1,0 +1,15 @@
+.venv/
+data/raw/
+data/processed/
+!data/processed/equity_*.parquet
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.DS_Store
+*.egg-info/
+dist/
+build/
+.env
+*.log
+notebooks/.ipynb_checkpoints/

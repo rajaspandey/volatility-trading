@@ -1,0 +1,42 @@
+# Per-strategy parameters
+
+straddle:
+  tenor_days: 30                 # ~1 month options
+  hedge_times: ["09:30", "13:30"]  # ET bar times (10AM / 2PM proxies)
+
+strangle:
+  sizes: [0.0, 0.05, 0.1]        # strangle_size parameter
+  tenor_days: 5                  # weekly options
+  rv_window: 60                  # σ₆₀ for strike width
+  hedge_times: ["09:30", "13:30"]
+
+skew_arb:
+  tenor_days: 30
+  otm_moneyness: 0.97            # K₂ = K₁ × 0.97
+  lambda_lookback_days: 90       # rolling window for Γ ratio
+  leverage: 2.0                  # 2× notional
+  hedge_times: ["09:30"]         # daily hedge (once)
+
+iv_surface:
+  skew_scale: 0.3                # calibration param for SKEW → IV skew conversion
+  vix9d_tenor_days: 9            # VIX9D covers 9-day horizon
+  vix_tenor_days: 30             # VIX covers 30-day horizon
+
+ml:
+  retrain_every_months: 4
+  train_window_years: 2
+  y1_sharpe_threshold: -0.25     # bad day: Sharpe below this
+  y2_sharpe_threshold: 0.30      # good day: Sharpe above this
+  c1_initial: 0.16               # P(y1) threshold for S1
+  c1_ema_window: 22              # trading days for EMA
+  c1_target_low: 0.70            # target trading freq lower bound
+  c1_target_high: 0.85           # target trading freq upper bound
+  c1_step: 0.001                 # c1 adjustment per day
+  boost_margin_threshold: 0.25   # S2: double qty if margin > 25%
+  rf_params:
+    n_estimators: 300
+    max_depth: 6
+    min_samples_split: 2
+    min_samples_leaf: 50
+    max_features: 0.25
+    random_state: 42

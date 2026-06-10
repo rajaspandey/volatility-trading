@@ -21,7 +21,6 @@
 \DeclareMathOperator*{\argmin}{arg\,min}
 
 \usepackage{natbib}
-\usepackage{gensymb}
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{caption}
@@ -31,7 +30,6 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{float} 
-\usepackage{subfigure} 
 \usepackage{makecell}
 \usepackage{booktabs}
 \usepackage[super]{nth}
@@ -379,7 +377,7 @@ Now, we propose the value of $\lambda = \frac{\Gamma_1}{\Gamma_2}$. Using this, 
 \end{align*}
 Now, because of the implied volatility skew generally found in put options, $\sigma_2 > \sigma_1$. Hence, this strategy is profitable in expectation, because the change in portfolio value $d V$ is positive.
 
-A crucial aspect of implementing this strategy is determining which values of $\Gamma$ to use. Generally, $\Gamma$ changes with time and can hold many different values during an option's lifetime. There are two approaches to this. The first approach is to dynamically balance $\labda = \frac{\Gamma_1}{\Gamma_2}$. This is similar to dynamic delta hedging and ensures that we always hold the appropriate number of options (long and short) to adjust for any underlying price changes. However, a limitation of this approach is that this requires frequently buying and selling options. In comparison to stocks, option prices are much more volatile and rapidly buying or selling large amounts of options can cause much larger losses than dynamic delta hedging as option prices can shoot up or down over time. The second approach is to determine a reasonable $\lambda$ value based on recent historical data. To determine an appropriate static value for $\lambda$, we could consider the following. 
+A crucial aspect of implementing this strategy is determining which values of $\Gamma$ to use. Generally, $\Gamma$ changes with time and can hold many different values during an option's lifetime. There are two approaches to this. The first approach is to dynamically balance $\lambda = \frac{\Gamma_1}{\Gamma_2}$. This is similar to dynamic delta hedging and ensures that we always hold the appropriate number of options (long and short) to adjust for any underlying price changes. However, a limitation of this approach is that this requires frequently buying and selling options. In comparison to stocks, option prices are much more volatile and rapidly buying or selling large amounts of options can cause much larger losses than dynamic delta hedging as option prices can shoot up or down over time. The second approach is to determine a reasonable $\lambda$ value based on recent historical data. To determine an appropriate static value for $\lambda$, we could consider the following. 
 
 \begin{align}\label{lambdaEqn}
     \lambda = E_S \left[ \frac{\int_0^T \Gamma_2 d t}{\int_0^T \Gamma_1 d t}\right]
