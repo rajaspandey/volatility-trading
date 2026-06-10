@@ -65,7 +65,9 @@ class MarketUniverse:
 
     def daily_row(self, dt: pd.Timestamp) -> pd.Series:
         """Full daily row for a given date."""
-        d = pd.Timestamp(dt).normalize()
+        d = pd.Timestamp(dt)
+        d = d.tz_localize(None) if d.tzinfo is not None else d
+        d = d.normalize()
         idx = self._daily.index.searchsorted(d, side="right") - 1
         if idx < 0:
             raise KeyError(f"No daily data on or before {d}")
@@ -74,6 +76,10 @@ class MarketUniverse:
     def hourly_row(self, ts: pd.Timestamp) -> pd.Series:
         """Full hourly row at or before ts."""
         if self._hourly.empty:
+            return self.daily_row(ts)
+        hourly_tz = self._hourly.index.tz
+        ts_tz = getattr(ts, "tzinfo", None)
+        if (hourly_tz is None) != (ts_tz is None):
             return self.daily_row(ts)
         idx = self._hourly.index.searchsorted(ts, side="right") - 1
         if idx < 0:
@@ -96,7 +102,8 @@ class MarketUniverse:
     # ------------------------------------------------------------------
 
     def _get_daily(self, ts: pd.Timestamp, col: str) -> float:
-        d = pd.Timestamp(ts).normalize()
+        d = pd.Timestamp(ts).tz_localize(None) if pd.Timestamp(ts).tzinfo is not None else pd.Timestamp(ts)
+        d = d.normalize()
         idx = self._daily.index.searchsorted(d, side="right") - 1
         if idx < 0:
             raise KeyError(f"No daily data on or before {d}")

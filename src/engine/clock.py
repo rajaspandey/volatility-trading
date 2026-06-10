@@ -86,11 +86,17 @@ class TradingClock:
             yield EODEvent(ts=eod_ts)
 
     def _get_bar(self, dt: pd.Timestamp, hour: int) -> pd.Timestamp | None:
-        """Return the hourly bar timestamp for dt at the given hour, or None."""
+        """Return the hourly bar timestamp for dt at the given hour, or None.
+
+        Always returns a tz-naive timestamp so all event timestamps are uniform.
+        """
         dt_date = dt.date()
         mask = (
             (self.hourly.index.date == dt_date) &
             (self.hourly.index.hour == hour)
         )
         rows = self.hourly.index[mask]
-        return rows[0] if len(rows) > 0 else None
+        if len(rows) == 0:
+            return None
+        ts = rows[0]
+        return ts.tz_localize(None) if ts.tzinfo is not None else ts
